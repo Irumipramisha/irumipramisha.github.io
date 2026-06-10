@@ -43,6 +43,17 @@ const observer = new IntersectionObserver((entries) => {
 
 revealEls.forEach(el => observer.observe(el));
 
+// PROJECT ARROW CLICK - OPEN NEW TAB 
+const projectArrow = document.querySelector('.project-arrow');
+if (projectArrow) {
+  projectArrow.addEventListener('click', function(e) {
+    e.preventDefault();
+    //  GitHub URL 
+    const url = 'https://github.com/sadithaboxrec/Mental-HealthCare-Application_Project.git';
+    window.open(url, '_blank');
+  });
+}
+
 // FORM HANDLER (UPDATED WITH FETCH)
 function handleSubmit(e) {
   e.preventDefault();
